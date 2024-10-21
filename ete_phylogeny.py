@@ -8,7 +8,6 @@ def build_tree():
 
 
 def customize_tree(tree):
-    scale_factor =  100
 
     ts = TreeStyle()
     ts.show_leaf_name = True
@@ -17,8 +16,6 @@ def customize_tree(tree):
     treestyle["shape"]="square"
     for tree_element in tree.iter_leaves():
         tree_element.set_style(treestyle)
-        if not tree_element.is_root():
-            tree_element.dist *= scale_factor
 
     
     #Clade Ia
